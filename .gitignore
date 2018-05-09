@@ -1,0 +1,5 @@
+node_modules/
+about.hbs
+help.html
+package-lock.json
+server.log
