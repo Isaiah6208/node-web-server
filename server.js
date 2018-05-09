@@ -2,6 +2,9 @@ const express = require('express');
 const hbs = require('hbs');
 const fs = require('fs');
 
+// Dynamic port variable for web deployment.
+const port = process.env.port || 3000;
+
 var app = express(); // Set to the result of calling express.
 
 hbs.registerPartials(__dirname + '/views/partials');
@@ -64,6 +67,6 @@ res.render('about', {
 
 
 
-app.listen(3000), () => {
-    console.log('The server is now running on port 3000');
+app.listen(port), () => {
+    console.log('The server is now running on port  + ${port}');
 };
