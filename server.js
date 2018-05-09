@@ -3,7 +3,7 @@ const hbs = require('hbs');
 const fs = require('fs');
 
 // Dynamic port variable for web deployment.
-const port = process.env.port || 3000;
+var port = process.env.PORT || 3080;
 
 var app = express(); // Set to the result of calling express.
 
@@ -67,6 +67,6 @@ res.render('about', {
 
 
 
-app.listen(port), () => {
-    console.log('The server is now running on port  + ${port}');
-};
+app.listen(port, function() {
+    console.log('Our app is running on Port: ' + port);
+});
