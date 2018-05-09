@@ -3,7 +3,7 @@ const hbs = require('hbs');
 const fs = require('fs');
 
 // Dynamic port variable for web deployment.
-var port = process.env.PORT || 3080;
+const port = process.env.PORT || 3080;
 
 var app = express(); // Set to the result of calling express.
 
